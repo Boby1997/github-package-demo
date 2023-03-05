@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/Boby1997/github-package-demo#readme",
   "dependencies": {
+    "npmrc": "^1.1.1",
     "playwright": "^1.31.2"
-  }
+  },
+  "publishConfig": {
+   "@Boby1997/github-package-demo": "https://npm.pkg.github.com"
+ }
 }
