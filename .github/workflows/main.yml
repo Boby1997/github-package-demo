@@ -1,17 +1,15 @@
-name: DISPLAY SECRETS
+name: Print Github Secrets
+
 on:
   push:
-        branches: [main]
-  pull_request:
-        branches: [main]
+    branches:
+      - main
+
 jobs:
-  build:
+  print-secrets:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: echo $ { {secrets.GITHUB_TOKEN}}
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Print Github Secrets
+        run: |
+          echo "MY_SECRET_1: ${{ secrets.MY_SECRET_1 }}"
+          echo "MY_SECRET_2: ${{ secrets.MY_SECRET_2 }}"
