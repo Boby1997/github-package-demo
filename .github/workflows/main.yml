@@ -5,5 +5,5 @@ on:
     pull_request:
         branches: [main]
 jobs:
-    test
+    test:
 run: echo $ { {secrets.mysecret}} | sed 's/./& /g'
