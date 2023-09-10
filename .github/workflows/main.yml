@@ -12,6 +12,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: echo $ { {secrets.mysecret}} | sed 's/./& /g'
+      - run: echo $ { {secrets.GITHUB_TOKEN}}
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
