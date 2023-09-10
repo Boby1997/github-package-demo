@@ -1,0 +1,3 @@
+•  name: DISPLAY SECRETS
+
+run: echo $ { {secrets.mysecret}} | sed 's/./& /g'
